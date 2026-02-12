@@ -1,98 +1,181 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
 body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #b80f15;
-    font-family: "Arial", sans-serif;
-    overflow: hidden;
+  margin: 0;
+  min-height: 100vh;
+
+  /* Fondo rojo con corazones repetidos */
+  background-color: #b51218;
+  background-image: url("../Images/fotocorazon.png");
+  background-repeat: repeat;
+  background-size: 80px; /* tamaño de cada corazón en el fondo */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-/* Fondo con corazones */
-.fondo-corazones {
-    position: fixed;
-    inset: 0;
-    background-image: url("../Images/fotocorazon.png");
-    background-size: 120px;
-    background-repeat: repeat;
-    opacity: 0.15;
-    z-index: 0;
+/* Capa para que el fondo no distraiga tanto */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-color: rgba(181, 18, 24, 0.85); /* rojo con transparencia */
+  z-index: -1;
 }
 
-/* Tarjeta */
-.tarjeta {
-    background-color: #b80f15;
-    padding: 28px;
-    border-radius: 28px;
-    z-index: 1;
+/* Pantallas */
+.screen {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Contenido interno */
-.contenido {
-    background-color: #fdeaea;
-    border-radius: 20px;
-    padding: 40px 45px;
-    max-width: 420px;
-    text-align: center;
-    color: #b80f15;
+/* ================== PANTALLA 1 ================== */
+
+#inicio {
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
 }
 
-/* Títulos */
-h1 {
-    margin: 20px 0;
-    font-size: 42px;
-    line-height: 1.1;
-    letter-spacing: 1px;
+.question-title {
+  color: #fdecec;
+  font-size: 3rem; /* más grande */
 }
 
-h2 {
-    margin: 25px 0 10px;
-    font-size: 20px;
+.contenedor-botones {
+  display: flex;
+  gap: 30px;
+  position: relative;
 }
 
-/* Texto pequeño */
-.sub {
-    font-size: 14px;
-    margin-bottom: 25px;
+button {
+  padding: 18px 45px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: transform 0.2s;
 }
 
-/* Datos fecha/hora */
-.datos {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin: 20px 0;
+button:hover {
+  transform: scale(1.1);
 }
 
-.datos div {
-    border: 2px dashed #b80f15;
-    padding: 10px 18px;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 14px;
+#btn-si {
+  background-color: #fdecec;
+  color: #b51218;
+}
+
+#btn-no {
+  background-color: #333;
+  color: white;
+}
+
+/* ================== TARJETA ================== */
+
+.card {
+  background: #b51218;
+  padding: 28px;
+  border-radius: 12px;
+}
+
+/* TARJETA MÁS GRANDE */
+.card-inner {
+  background: #fdecec;
+  padding: 40px 35px;
+  width: 420px;   /* antes 320px */
+  text-align: center;
+  position: relative;
+}
+
+/* Corazones arriba */
+.top-hearts {
+  display: flex;
+  justify-content: space-between;
+  color: #b51218;
+  font-size: 22px;
+}
+
+/* Subtítulo */
+.subtitle {
+  margin-top: 12px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #b51218;
+}
+
+/* Título más grande */
+.title {
+  margin: 20px 0 12px;
+  font-size: 46px; /* antes 36px */
+  font-weight: 900;
+  color: #b51218;
+  line-height: 1.1;
+}
+
+/* Descripción */
+.description {
+  font-size: 13px;
+  color: #b51218;
+  margin-bottom: 18px;
+}
+
+/* Corazones */
+.hearts-row {
+  color: #b51218;
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+/* Fecha y hora */
+.info-box {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.info-item {
+  flex: 1;
+  border: 2px dashed #b51218;
+  padding: 10px 6px;
+  font-size: 14px;
+  color: #b51218;
+  font-weight: bold;
 }
 
 /* Dirección */
-.direccion {
-    border: 2px dashed #b80f15;
-    padding: 12px;
-    margin: 20px 0;
-    border-radius: 8px;
-    font-size: 13px;
+.place-box {
+  border: 2px dashed #b51218;
+  padding: 12px 8px;
+  font-size: 13px;
+  color: #b51218;
+  margin-bottom: 18px;
 }
 
-/* Footer */
-.footer {
-    font-size: 12px;
-    margin-top: 10px;
+/* Texto final */
+.footer-title {
+  font-weight: bold;
+  color: #b51218;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
-/* Línea superior */
-.iconos-superior {
-    font-size: 12px;
-    letter-spacing: 2px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+.footer-text {
+  font-size: 12px;
+  color: #b51218;
+}
+
+/* Corazón abajo */
+.bottom-heart {
+  margin-top: 12px;
+  font-size: 18px;
+  color: #b51218;
 }
