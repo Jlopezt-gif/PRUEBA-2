@@ -6,7 +6,6 @@
 body {
   margin: 0;
   min-height: 100vh;
-<<<<<<< HEAD
 
   /* Fondo rojo con corazones repetidos */
   background-color: #b51218;
@@ -14,16 +13,12 @@ body {
   background-repeat: repeat;
   background-size: 80px; /* tamaño de cada corazón en el fondo */
   
-=======
-  background: #b51218; /* Rojo exterior */
->>>>>>> d494bc9224c443905d51ebb8194d2a01c89dda60
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
-<<<<<<< HEAD
 /* Capa para que el fondo no distraiga tanto */
 body::before {
   content: "";
@@ -33,8 +28,6 @@ body::before {
   z-index: -1;
 }
 
-=======
->>>>>>> d494bc9224c443905d51ebb8194d2a01c89dda60
 /* Pantallas */
 .screen {
   width: 100%;
@@ -53,11 +46,7 @@ body::before {
 
 .question-title {
   color: #fdecec;
-<<<<<<< HEAD
   font-size: 3rem; /* más grande */
-=======
-  font-size: 2.5rem;
->>>>>>> d494bc9224c443905d51ebb8194d2a01c89dda60
 }
 
 .contenedor-botones {
@@ -67,13 +56,8 @@ body::before {
 }
 
 button {
-<<<<<<< HEAD
   padding: 18px 45px;
   font-size: 1.5rem;
-=======
-  padding: 15px 35px;
-  font-size: 1.3rem;
->>>>>>> d494bc9224c443905d51ebb8194d2a01c89dda60
   cursor: pointer;
   border: none;
   border-radius: 50px;
@@ -106,13 +90,8 @@ button:hover {
 /* TARJETA MÁS GRANDE */
 .card-inner {
   background: #fdecec;
-<<<<<<< HEAD
   padding: 40px 35px;
   width: 420px;   /* antes 320px */
-=======
-  padding: 30px 25px;
-  width: 320px;
->>>>>>> d494bc9224c443905d51ebb8194d2a01c89dda60
   text-align: center;
   position: relative;
 }
@@ -133,11 +112,7 @@ button:hover {
   color: #b51218;
 }
 
-<<<<<<< HEAD
 /* Título más grande */
-=======
-/* Título */
->>>>>>> d494bc9224c443905d51ebb8194d2a01c89dda60
 .title {
   margin: 20px 0 12px;
   font-size: 46px; /* antes 36px */
@@ -189,21 +164,7 @@ button:hover {
 .footer-title {
   font-weight: bold;
   color: #b51218;
-<<<<<<< HEAD
   margin-bottom: 10px;
-=======
-  margin-bottom: 8px;
-}
-
-.footer-text {
-  font-size: 10px;
-  color: #b51218;
-}
-
-/* Corazón abajo */
-.bottom-heart {
-  margin-top: 10px;
->>>>>>> d494bc9224c443905d51ebb8194d2a01c89dda60
   font-size: 16px;
 }
 
