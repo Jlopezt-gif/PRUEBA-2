@@ -1,16 +1,70 @@
 * {
   box-sizing: border-box;
-  font-family: "Arial", sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background: #b51218; /* Fondo rojo exterior */
+  background: #b51218; /* Rojo exterior */
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
+
+/* Pantallas */
+.screen {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================== PANTALLA 1 ================== */
+
+#inicio {
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
+
+.question-title {
+  color: #fdecec;
+  font-size: 2.5rem;
+}
+
+.contenedor-botones {
+  display: flex;
+  gap: 30px;
+  position: relative;
+}
+
+button {
+  padding: 15px 35px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+#btn-si {
+  background-color: #fdecec;
+  color: #b51218;
+}
+
+#btn-no {
+  background-color: #333;
+  color: white;
+}
+
+/* ================== TARJETA ================== */
 
 .card {
   background: #b51218;
@@ -19,14 +73,14 @@ body {
 }
 
 .card-inner {
-  background: #fdecec; /* Fondo claro interior */
+  background: #fdecec;
   padding: 30px 25px;
   width: 320px;
   text-align: center;
   position: relative;
 }
 
-/* Corazones de arriba */
+/* Corazones arriba */
 .top-hearts {
   display: flex;
   justify-content: space-between;
@@ -42,7 +96,7 @@ body {
   color: #b51218;
 }
 
-/* Título principal */
+/* Título */
 .title {
   margin: 15px 0 10px;
   font-size: 36px;
@@ -58,13 +112,13 @@ body {
   margin-bottom: 15px;
 }
 
-/* Corazones separador */
+/* Corazones */
 .hearts-row {
   color: #b51218;
   margin-bottom: 15px;
 }
 
-/* Caja de fecha y hora */
+/* Fecha y hora */
 .info-box {
   display: flex;
   gap: 10px;
@@ -89,20 +143,19 @@ body {
   margin-bottom: 15px;
 }
 
-/* Texto final grande */
+/* Texto final */
 .footer-title {
   font-weight: bold;
   color: #b51218;
   margin-bottom: 8px;
 }
 
-/* Texto pequeño final */
 .footer-text {
   font-size: 10px;
   color: #b51218;
 }
 
-/* Corazón de abajo */
+/* Corazón abajo */
 .bottom-heart {
   margin-top: 10px;
   font-size: 16px;
