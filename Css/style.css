@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #b51218; /* Fondo rojo exterior */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: #b51218;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.card-inner {
+  background: #fdecec; /* Fondo claro interior */
+  padding: 30px 25px;
+  width: 320px;
+  text-align: center;
+  position: relative;
+}
+
+/* Corazones de arriba */
+.top-hearts {
+  display: flex;
+  justify-content: space-between;
+  color: #b51218;
+  font-size: 20px;
+}
+
+/* Subtítulo */
+.subtitle {
+  margin-top: 10px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #b51218;
+}
+
+/* Título principal */
+.title {
+  margin: 15px 0 10px;
+  font-size: 36px;
+  font-weight: 900;
+  color: #b51218;
+  line-height: 1.1;
+}
+
+/* Descripción */
+.description {
+  font-size: 11px;
+  color: #b51218;
+  margin-bottom: 15px;
+}
+
+/* Corazones separador */
+.hearts-row {
+  color: #b51218;
+  margin-bottom: 15px;
+}
+
+/* Caja de fecha y hora */
+.info-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.info-item {
+  flex: 1;
+  border: 2px dashed #b51218;
+  padding: 8px 5px;
+  font-size: 12px;
+  color: #b51218;
+  font-weight: bold;
+}
+
+/* Dirección */
+.place-box {
+  border: 2px dashed #b51218;
+  padding: 10px 5px;
+  font-size: 11px;
+  color: #b51218;
+  margin-bottom: 15px;
+}
+
+/* Texto final grande */
+.footer-title {
+  font-weight: bold;
+  color: #b51218;
+  margin-bottom: 8px;
+}
+
+/* Texto pequeño final */
+.footer-text {
+  font-size: 10px;
+  color: #b51218;
+}
+
+/* Corazón de abajo */
+.bottom-heart {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #b51218;
+}
