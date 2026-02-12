@@ -1,51 +1,121 @@
 * {
   box-sizing: border-box;
-  font-family: "Arial", sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background: #b51218; /* Fondo rojo exterior */
+
+  /* Fondo rojo con corazones repetidos */
+  background-color: #b51218;
+  background-image: url("../Images/fotocorazon.png");
+  background-repeat: repeat;
+  background-size: 80px; /* tamaño de cada corazón en el fondo */
+  
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
+
+/* Capa para que el fondo no distraiga tanto */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-color: rgba(181, 18, 24, 0.85); /* rojo con transparencia */
+  z-index: -1;
+}
+
+/* Pantallas */
+.screen {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================== PANTALLA 1 ================== */
+
+#inicio {
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
+
+.question-title {
+  color: #fdecec;
+  font-size: 3rem; /* más grande */
+}
+
+.contenedor-botones {
+  display: flex;
+  gap: 30px;
+  position: relative;
+}
+
+button {
+  padding: 18px 45px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+#btn-si {
+  background-color: #fdecec;
+  color: #b51218;
+}
+
+#btn-no {
+  background-color: #333;
+  color: white;
+}
+
+/* ================== TARJETA ================== */
 
 .card {
   background: #b51218;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 28px;
+  border-radius: 12px;
 }
 
+/* TARJETA MÁS GRANDE */
 .card-inner {
-  background: #fdecec; /* Fondo claro interior */
-  padding: 30px 25px;
-  width: 320px;
+  background: #fdecec;
+  padding: 40px 35px;
+  width: 420px;   /* antes 320px */
   text-align: center;
   position: relative;
 }
 
-/* Corazones de arriba */
+/* Corazones arriba */
 .top-hearts {
   display: flex;
   justify-content: space-between;
   color: #b51218;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 /* Subtítulo */
 .subtitle {
-  margin-top: 10px;
-  font-size: 12px;
+  margin-top: 12px;
+  font-size: 14px;
   letter-spacing: 2px;
   color: #b51218;
 }
 
-/* Título principal */
+/* Título más grande */
 .title {
-  margin: 15px 0 10px;
-  font-size: 36px;
+  margin: 20px 0 12px;
+  font-size: 46px; /* antes 36px */
   font-weight: 900;
   color: #b51218;
   line-height: 1.1;
@@ -53,29 +123,30 @@ body {
 
 /* Descripción */
 .description {
-  font-size: 11px;
+  font-size: 13px;
   color: #b51218;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
-/* Corazones separador */
+/* Corazones */
 .hearts-row {
   color: #b51218;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+  font-size: 16px;
 }
 
-/* Caja de fecha y hora */
+/* Fecha y hora */
 .info-box {
   display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
 .info-item {
   flex: 1;
   border: 2px dashed #b51218;
-  padding: 8px 5px;
-  font-size: 12px;
+  padding: 10px 6px;
+  font-size: 14px;
   color: #b51218;
   font-weight: bold;
 }
@@ -83,28 +154,28 @@ body {
 /* Dirección */
 .place-box {
   border: 2px dashed #b51218;
-  padding: 10px 5px;
-  font-size: 11px;
+  padding: 12px 8px;
+  font-size: 13px;
   color: #b51218;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
-/* Texto final grande */
+/* Texto final */
 .footer-title {
   font-weight: bold;
   color: #b51218;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
-/* Texto pequeño final */
 .footer-text {
-  font-size: 10px;
+  font-size: 12px;
   color: #b51218;
 }
 
-/* Corazón de abajo */
+/* Corazón abajo */
 .bottom-heart {
-  margin-top: 10px;
-  font-size: 16px;
+  margin-top: 12px;
+  font-size: 18px;
   color: #b51218;
 }
